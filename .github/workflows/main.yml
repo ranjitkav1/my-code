@@ -6,6 +6,8 @@ jobs:
     steps:
       - name: print, change and list current directory
         run: |
+          CURRDIR=$(pwd)
+          cd "$CURRDIR"
           cd -
           pwd
           ls -la

@@ -5,6 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print, change and list current directory
-        run: pwd |
-             ls
+        run: |
+          pwd
+          cd -
+          pwd
+          ls
       

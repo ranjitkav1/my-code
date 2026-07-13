@@ -7,4 +7,8 @@ jobs:
       - name: print current directory
         run: pwd
       - name: change to previous directory
-        run: ../;ls
+        run: ../
+      - name: print current directory
+        run: pwd
+      - name: list current directory
+        run: ls

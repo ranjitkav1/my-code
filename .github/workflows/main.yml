@@ -10,5 +10,7 @@ jobs:
       - name: run the script
         run: ./setupenv.sh
       - name: convert to mp4
-        run: ./convert2mp4.py --f urllist.txt
+        run: |
+         chmod u+x convert2mp4.py 
+         convert2mp4.py --f urllist.txt
       

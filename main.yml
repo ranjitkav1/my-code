@@ -1,0 +1,10 @@
+me: Run my first job
+
+on: [push]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a script
+        run: echo "Hello World"

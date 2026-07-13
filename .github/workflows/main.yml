@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: make script executable
-        run: chmod u+x hello_world.sh
+        run: chmod u+x setupenv.sh
       - name: run the script
-        run: ./hello_world.sh
+        run: ./setupenv.sh
       

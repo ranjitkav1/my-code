@@ -5,4 +5,4 @@ jobs:
     runs-on: AlmaLinux
     steps:
       - name: Run a script
-        run: echo "Hello World"
+        run: echo "Hello World GitHub

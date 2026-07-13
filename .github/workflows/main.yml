@@ -4,6 +4,10 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     steps:
-      - name: print, change and list current directory
-        run: ./hello_world.sh
+      - name: Checkout code
+        run: actions/checkout@latest
+      - name: run script
+        run: |
+          chmod u+x /home/runner/my-code/hello_world.sh
+          ./home/runner/my-code/hello_world.sh
       

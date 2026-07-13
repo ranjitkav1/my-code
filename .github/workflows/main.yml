@@ -1,4 +1,4 @@
-name: me: Run my first job
+name: Run my first job
 on: [push]
 jobs:
   build-and-test:

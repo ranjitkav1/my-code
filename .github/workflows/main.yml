@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: print current directory
         run: pwd
-      - name: change to previous directory
+      - name: change to previous director
         run: ../
       - name: print current directory
         run: pwd

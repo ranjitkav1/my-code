@@ -7,7 +7,5 @@ jobs:
       - name: print, change and list current directory
         run: |
           pwd
-          cd -
-          pwd
           ls
       

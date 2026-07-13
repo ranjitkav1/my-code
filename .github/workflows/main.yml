@@ -6,6 +6,7 @@ jobs:
     steps:
       - name: print, change and list current directory
         run: |
+          cd -
           pwd
           ls -la
       

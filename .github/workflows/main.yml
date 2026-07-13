@@ -1,7 +1,7 @@
 name: Run my first job
 on: [push]
 jobs:
-  build-and-test:
+  start-conversion:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -10,5 +10,5 @@ jobs:
       - name: run the script
         run: ./setupenv.sh
       - name: convert to mp4
-        run: ./conver2mp4.py --f urllist.txt
+        run: ./convert2mp4.py --f urllist.txt
       

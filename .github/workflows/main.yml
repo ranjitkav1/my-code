@@ -5,7 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print, change and list current directory
-        run: |
-          cd /home/runner/work/my-code/
-          ls -la
+        run: ./hello_world.sh
       

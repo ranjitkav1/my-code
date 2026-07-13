@@ -4,11 +4,9 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     steps:
-      - name: print current directory
-        run: pwd
-      - name: change to previous director
-        run: ../
-      - name: print current directory
-        run: pwd
-      - name: list current directory
-        run: ls
+      - name: print, change and list current directory
+        run: pwd |
+             cd ../ 
+             pwd
+             ls
+      

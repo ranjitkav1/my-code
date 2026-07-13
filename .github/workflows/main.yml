@@ -1,7 +1,5 @@
-me: Run my first job
-
+name: me: Run my first job
 on: [push]
-
 jobs:
   build-and-test:
     runs-on: AlmaLinux

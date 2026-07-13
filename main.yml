@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-latest
+    runs-on: AlmaLinux
     steps:
       - name: Run a script
         run: echo "Hello World"

@@ -7,7 +7,7 @@ jobs:
       - name: print, change and list current directory
         run: |
           CURRDIR=$(pwd)
-          cd "$CURRDIR"
+          echo "$CURRDIR"
           cd -
           pwd
           ls -la

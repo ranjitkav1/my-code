@@ -12,5 +12,5 @@ jobs:
       - name: convert to mp4
         run: |
          chmod u+x convert2mp4.py 
-         convert2mp4.py --f urllist.txt
+         ./convert2mp4.py --f urllist.txt
       

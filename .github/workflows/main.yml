@@ -5,9 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        run: actions/checkout@latest
+        run: actions/checkout@v4
       - name: run script
         run: |
-          chmod u+x /home/runner/my-code/hello_world.sh
-          ./home/runner/my-code/hello_world.sh
+          chmod u+x hello_world.sh
+          ./hello_world.sh
       

@@ -8,7 +8,8 @@ jobs:
         run: |
           CURRDIR=$(pwd)
           echo "$CURRDIR"
+          cd .
           cd -
-          pwd
+          cd -
           ls -la
       

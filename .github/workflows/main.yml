@@ -6,10 +6,6 @@ jobs:
     steps:
       - name: print, change and list current directory
         run: |
-          CURRDIR=$(pwd)
-          echo "$CURRDIR"
-          cd .
-          cd -
-          cd -
+          cd /home/runner/work/my-code/
           ls -la
       

@@ -8,13 +8,11 @@ import glob
 import shutil
 import json
 
+def my_token_verifier():
 tokens = {
-   "visitorData": "CgtNQktNTHpfd3BJTSi88NnSBjIKCgJVUxIEGgAgTGLfAgrcAjE5LllUPWgzTVRMclNhYlBPOGxzcTVfa0ZwVHNLUFAwMnhjSE1VMHI2b2Zhb3Mwd0pvWmVPRjZXTDFnZXF0bjdsN0UtanVjbVlBeS1mTExvbWpMdGpXMXpPZDhMWVlYRmZTTHRCenphRExyc1RKcU9aOVJGal9vaGVsSHp5ZFZWY1FmeGtKeUFQZHVSNldiZWFmMThyM0c0U1VwN2VjZlRzakh5b0FsMUVObU1FdVlKNnBVTlNzSDJPdmlOemZOd3FLZmJoemhPbWgxdkUxazhRZnhSek9IbWZ5SG9SWFhNN2psY2hOU2t1WS11ZGE2R0R4c21mUllFSTNWTDBXU2tlWnk5WHR1YUI4VTJ0dWdaMlBnY04yYVBJM3B0VmtGYlA1bl95YWJZanNfN2JxdU9pV3UtamdhOTB0ZEUzSEI3TFFOMXdWNVBXaXFFUE1LNUZGVy1kVGRBUnBnZw%3D%3D",
-   "poToken": "MlOIreO-u_vHd4iRdu1uEfqtodru_5zCX1shVsLfagVE-urVrW1F14n3fMVDR2tbdhpWcIvXhPyz6GXBj3SkZBZZwZ3Rk95DjJd1Y4D3UuK2w0LuMw=="
+   visitor_data = "CgtNQktNTHpfd3BJTSi88NnSBjIKCgJVUxIEGgAgTGLfAgrcAjE5LllUPWgzTVRMclNhYlBPOGxzcTVfa0ZwVHNLUFAwMnhjSE1VMHI2b2Zhb3Mwd0pvWmVPRjZXTDFnZXF0bjdsN0UtanVjbVlBeS1mTExvbWpMdGpXMXpPZDhMWVlYRmZTTHRCenphRExyc1RKcU9aOVJGal9vaGVsSHp5ZFZWY1FmeGtKeUFQZHVSNldiZWFmMThyM0c0U1VwN2VjZlRzakh5b0FsMUVObU1FdVlKNnBVTlNzSDJPdmlOemZOd3FLZmJoemhPbWgxdkUxazhRZnhSek9IbWZ5SG9SWFhNN2psY2hOU2t1WS11ZGE2R0R4c21mUllFSTNWTDBXU2tlWnk5WHR1YUI4VTJ0dWdaMlBnY04yYVBJM3B0VmtGYlA1bl95YWJZanNfN2JxdU9pV3UtamdhOTB0ZEUzSEI3TFFOMXdWNVBXaXFFUE1LNUZGVy1kVGRBUnBnZw%3D%3D",
+   po_token = "MlOIreO-u_vHd4iRdu1uEfqtodru_5zCX1shVsLfagVE-urVrW1F14n3fMVDR2tbdhpWcIvXhPyz6GXBj3SkZBZZwZ3Rk95DjJd1Y4D3UuK2w0LuMw=="
 }
-
-with open("token_file.json","w") as f:
-   json.dump(tokens,f)
 
 def begin_conversion(filen):
    with open(filen,"r") as fd:
@@ -25,7 +23,7 @@ def begin_conversion(filen):
          #print("filename is:", filename)
          # input url
          #yt = YouTube(url, use_po_token=True)
-         yt = YouTube(url, on_progress_callback=on_progress, use_po_token=True, token_file="token_file.json")
+         yt = YouTube(url, on_progress_callback=on_progress, use_po_token=True, po_token_verifier=my_token_verifier)
          # Get audio stream with highest bit rate
          audio_stream = yt.streams.filter(only_audio=True,file_extension="mp4").first()
          new_file = audio_stream.download()

@@ -19,7 +19,7 @@ def begin_conversion(filen):
       for line in lines:
          print("url is:",line)
          #yt = YouTube(url, use_po_token=True)
-         yt = YouTube(line, on_progress_callback=on_progress, use_po_token=True, po_token_verifier=my_token_verifier)
+         yt = YouTube(line, use_oauth=True, allow_oauth_cache=True,on_progress_callback=on_progress, use_po_token=True, po_token_verifier=my_token_verifier)
          # Get audio stream with highest bit rate
          audio_stream = yt.streams.filter(only_audio=True,file_extension="mp4").first()
          new_file = audio_stream.download()

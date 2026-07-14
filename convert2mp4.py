@@ -14,7 +14,8 @@ def begin_conversion(filen):
          print("url is:",url)
          #print("filename is:", filename)
          # input url
-         yt = YouTube(url, use_po_token=True)
+         #yt = YouTube(url, use_po_token=True)
+         yt = YouTube(url, on_progress_callback=on_progress, use_po_token=True, token_file="token_file.json")
          # Get audio stream with highest bit rate
          audio = yt.streams.get_audio_only()
          new_file = audio.download()
